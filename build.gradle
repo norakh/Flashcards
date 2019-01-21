@@ -34,9 +34,16 @@ dependencies {
     testImplementation 'junit:junit:4.12'
 }
 
+spotbugs{
+    ignoreFailures = false
+}
+
+checkstyle {
+    configFile file ("checkstyle.xml")
+}
 jar {
     manifest {
-        attributes 'Main-Class': 'de.tud.cs.se.flashcards.Main'
+        attributes 'Main-class': 'de.tud.cs.se.flashcards.Main'
     }
 }
 
